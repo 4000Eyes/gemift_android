@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/_100sdp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/border_gray"
+    android:layout_margin="@dimen/_3sdp"
+    android:layout_weight="1">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_image"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_80sdp"
+        android:background="@drawable/rounded_gray_top">
+        <ImageView
+            android:id="@+id/imageViewSub"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_shoes"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_details"
+        app:layout_constraintTop_toBottomOf="@id/ll_image"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Item Name"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:textStyle="bold"
+            android:fontFamily="@font/opensans_medium"
+            android:ellipsize="end"
+            android:textColor="@color/dark_gray"/>
+
+        <TextView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:text="Item description"
+            android:id="@+id/txt_description"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:padding="@dimen/_3sdp"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/open_sans_regular"
+            android:textColor="@color/text_color_gray_op_60"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

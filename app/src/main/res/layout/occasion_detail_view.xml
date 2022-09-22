@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/appbar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_friend_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_10"
+                    app:cardBackgroundColor="@color/card_color"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <include
+                                android:id="@+id/friend_circle_img"
+                                layout="@layout/friend_circle_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/margin_10"
+                                android:layout_marginTop="@dimen/margin_10"
+                                android:layout_marginEnd="@dimen/margin_10"
+                                android:layout_marginBottom="@dimen/margin_10" />
+
+                            <LinearLayout
+                                android:id="@+id/linear_circle_detail"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_toStartOf="@+id/img_edit"
+                                android:layout_toEndOf="@+id/friend_circle_img"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:id="@+id/txt_circle_creator_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/opensans_medium"
+                                    android:text="Anitha Circle"
+                                    android:textColor="@color/colorPrimary"
+                                    android:textSize="@dimen/textSize_17" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="start"
+                                    android:fontFamily="@font/open_sans_regular"
+                                    android:text="+1 123456789"
+                                    android:textColor="@color/black"
+                                    android:textSize="17dp"
+                                    android:visibility="gone" />
+                            </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/img_edit"
+                                android:layout_width="@dimen/margin_30"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_edit_new" />
+                        </RelativeLayout>
+
+                        <Button
+                            android:id="@+id/btn_img_upload"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:layout_marginRight="@dimen/margin_10"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="Upload"
+                            android:visibility="gone" />
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_friend_occasion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_friend_detail"
+                    android:layout_margin="@dimen/margin_10"
+                    app:cardBackgroundColor="@color/card_color"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_circle_occasion_name"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="start"
+                                android:layout_toStartOf="@+id/img_add_occasion"
+                                android:fontFamily="@font/open_sans_bold"
+                                android:text="Product Selected (2)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_18" />
+
+                            <ImageView
+                                android:id="@+id/img_add_occasion"
+                                android:layout_width="@dimen/margin_30"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_add" />
+
+                        </RelativeLayout>
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyle_occasion_list"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_2"
+                            android:layout_marginTop="@dimen/margin_2"
+                            android:layout_marginEnd="@dimen/margin_2"
+                            android:layout_marginBottom="@dimen/margin_2"
+                            android:nestedScrollingEnabled="false"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        <include
+                            layout="@layout/selected_product_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+                        <include
+                            layout="@layout/selected_product_view"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2">
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_2"
+                                android:layout_weight="1"
+                                android:text="Initiate Fund" />
+
+                            <Button
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="@dimen/margin_2"
+                                android:layout_weight="1"
+                                android:backgroundTint="@color/green"
+                                android:text="Let me buy" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/card_occasion_contributor"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/card_friend_interest"
+                    android:layout_margin="@dimen/margin_10"
+                    app:cardBackgroundColor="@color/card_color"
+                    app:cardCornerRadius="10dp">
+
+                    <LinearLayout
+                        android:id="@+id/linear"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/margin_10"
+                        android:orientation="vertical">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/txt_contributor_count"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_gravity="start"
+                                android:layout_toStartOf="@+id/img_add_contributor"
+                                android:fontFamily="@font/open_sans_bold"
+                                android:text="Occasion Contributor (15)"
+                                android:textColor="@color/black"
+                                android:textSize="@dimen/textSize_17" />
+
+                            <ImageView
+                                android:id="@+id/img_add_contributor"
+                                android:layout_width="@dimen/margin_30"
+                                android:layout_height="@dimen/margin_30"
+                                android:layout_alignParentRight="true"
+                                android:src="@drawable/ic_add" />
+
+                        </RelativeLayout>
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyle_friend_lits"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/margin_2"
+                            android:layout_marginTop="@dimen/margin_2"
+                            android:layout_marginEnd="@dimen/margin_2"
+                            android:layout_marginBottom="@dimen/margin_2"
+                            android:nestedScrollingEnabled="false"
+                            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+    </RelativeLayout>
+</RelativeLayout>

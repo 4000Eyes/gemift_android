@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:ignore="NamespaceTypo">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_work_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@color/card_color"
+        android:elevation="@dimen/margin_10"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="@dimen/margin_15"
+        app:cardElevation="15dp">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/relative_proudct"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/margin_5">
+
+                <ImageView
+                    android:id="@+id/img_friends2"
+                    android:layout_width="@dimen/margin_50"
+                    android:layout_height="@dimen/margin_50"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:contentDescription="@null"
+                    android:padding="5dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/watch" />
+
+                <LinearLayout
+                    android:id="@+id/line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/margin_5"
+                    android:layout_toStartOf="@+id/linear_like"
+                    android:layout_toEndOf="@+id/img_friends2"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_prodname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text="Analog watch"
+                        android:textColor="@color/text_color"
+                        android:textSize="@dimen/textSize_18"
+                        android:textStyle="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/linear_call"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="@dimen/margin_5">
+
+                        <TextView
+                            android:id="@+id/tv_prodprice"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/open_sans_bold"
+                            android:text="$200"
+                            android:textColor="@color/text_color"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_like"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true">
+
+                  <LinearLayout
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content">
+                      <ImageView
+                          android:id="@+id/like"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/ic_thumb_up" />
+                      <!--suppress AndroidUnresolvableTag -->
+                      <Space
+                          android:layout_width="30dp"
+                          android:layout_height="wrap_content" />
+
+                      <ImageView
+                          android:id="@+id/dislike"
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:background="@drawable/ic_thumb_down"
+
+                          />
+                  </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/total_user"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_height="wrap_content"
+                        android:text="0 Liked"
+                        android:textColor="@color/black"
+                        android:textStyle="bold"/>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/linearbuttons"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/relative_proudct"
+                android:layout_marginStart="@dimen/margin_5"
+                android:layout_marginTop="@dimen/margin_5"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:layout_marginBottom="@dimen/margin_5"
+                android:visibility="visible"
+                android:weightSum="2">
+                <Button
+                    android:id="@+id/btn_fund"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/colorPrimary"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Initiate fund"
+                    android:textAllCaps="false"
+                    android:textColor="@color/snow"
+                    android:textStyle="bold" />
+                <Button
+                    android:id="@+id/btn_buy"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/margin_5"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/green"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="Let me buy"
+                    android:textAllCaps="false"
+                    android:textColor="@color/snow"
+                    android:textStyle="bold" />
+
+
+            </LinearLayout>
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

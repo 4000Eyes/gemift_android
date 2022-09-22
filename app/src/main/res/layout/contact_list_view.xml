@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screenBG">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_friends2"
+                android:layout_width="@dimen/margin_70"
+                android:layout_height="@dimen/margin_70"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentLeft="true"
+                android:layout_centerInParent="true"
+                android:contentDescription="@null"
+                android:padding="5dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/avatar" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="@dimen/margin_5"
+                android:layout_toEndOf="@+id/img_friends2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_contact_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="ManiKandan"
+                    android:textColor="@color/quantum_grey600"
+                    android:textSize="@dimen/textSize_18"
+                     />
+
+                <TextView
+                    android:id="@+id/txt_contact_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/occassion"
+                    android:textColor="@color/quantum_grey"
+                    android:textSize="@dimen/textSize_18"
+                     />
+            </LinearLayout>
+        </RelativeLayout>
+
+<!--        <View-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="2dp"-->
+<!--            android:layout_marginTop="@dimen/margin_5"-->
+<!--            android:background="@color/text_color" />-->
+    </LinearLayout>
+</RelativeLayout>

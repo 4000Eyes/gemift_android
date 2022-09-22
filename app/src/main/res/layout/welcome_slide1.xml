@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBG">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/margin_200"
+                android:background="@drawable/custom_rectangle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/textView"
+                android:layout_width="250dp"
+                android:layout_height="@dimen/margin_80"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="18dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center_horizontal"
+                android:src="@drawable/gemifit_logo"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="MissingConstraints" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_10"
+            android:fontFamily="@font/barlow"
+            android:text="Secret friend and \nContributer"
+            android:textAlignment="center"
+            android:textColor="@color/text_color_orange"
+            android:textSize="@dimen/margin_24" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin_150"
+            android:layout_marginTop="10dp"
+            android:gravity="center_horizontal"
+            android:src="@drawable/welcome1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:ignore="MissingConstraints" />
+
+    </LinearLayout>
+</RelativeLayout>

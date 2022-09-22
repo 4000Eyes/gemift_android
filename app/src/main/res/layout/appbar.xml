@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/relative_appBar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/Theme.Gemift.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/Theme.Gemift.PopupOverlay">
+
+            <TextView
+                android:id="@+id/txt_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:fontFamily="@font/opensans_medium"
+                android:textColor="@color/snow"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/img_burger"
+                android:layout_width="@dimen/margin_40"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:src="@drawable/ic_burger"
+                android:visibility="gone"
+
+                />
+
+
+            <ImageView
+                android:id="@+id/img_done"
+                android:layout_width="@dimen/margin_50"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:src="@drawable/ic_done"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_creatgroup"
+                android:layout_width="@dimen/margin_40"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:src="@drawable/add_friendgroup"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/img_filter"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:src="@drawable/ic_filter"
+                android:visibility="gone" />
+
+            <ImageView
+                android:visibility="gone"
+                android:id="@+id/img_edit"
+                android:layout_width="@dimen/margin_30"
+                android:layout_height="30dp"
+                android:layout_gravity="right"
+                android:layout_marginEnd="@dimen/margin_5"
+                android:src="@drawable/ic_edit"
+                app:tint="@color/white" />
+
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+</RelativeLayout>

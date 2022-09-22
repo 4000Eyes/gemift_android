@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBG"
+    android:orientation="vertical"
+    tools:context=".Ui.LoginActivity.SignUpDetails">
+
+    <include
+        android:id="@+id/appbar"
+        layout="@layout/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/appbar">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_20"
+                        android:layout_marginTop="10dp"
+                        android:layout_weight="1"
+                        android:hint="@string/firstname">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_first_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/barlow"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/text_color"
+                            android:textSize="18dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="@dimen/margin_20"
+                        android:layout_weight="1"
+                        android:hint="@string/lastname">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_last_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/barlow"
+                            android:inputType="textEmailAddress"
+                            android:textColor="@color/text_color"
+                            android:textSize="18dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/textSize_20"
+                    android:gravity="center_vertical">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:ccpDialog_backgroundColor="@color/screenBG"
+                        app:ccpDialog_searchEditTextTint="@color/text_color"
+                        app:ccpDialog_textColor="@color/text_color"
+                        app:ccp_autoFormatNumber="true"
+                        app:ccp_contentColor="@color/text_color"
+                        app:ccp_countryPreference="us,in"
+                        app:ccp_defaultNameCode="US" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/mobile_number">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edt_mobileno"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/barlow"
+                            android:inputType="phone"
+                            android:textColor="@color/text_color"
+                            android:textSize="18dp" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="@dimen/margin_20"
+                    android:fontFamily="@font/quicksand_bold"
+                    android:text="@string/gender"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/textSize_22" />
+
+                <RadioGroup
+                    android:id="@+id/radio_gender_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:layout_marginLeft="@dimen/margin_20">
+
+                    <RadioButton
+                        android:id="@+id/radio_male"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/barlow"
+                        android:text="@string/male"
+                        android:textColor="@color/text_color" />
+
+                    <RadioButton
+                        android:id="@+id/radio_female"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/barlow"
+                        android:text="@string/female"
+                        android:textColor="@color/text_color" />
+                </RadioGroup>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:hint="@string/Email">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/barlow"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/text_color"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/margin_20"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="@dimen/margin_20"
+                    android:visibility="gone"
+                    android:hint="@string/group_name">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/edt_group_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/barlow"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/text_color"
+                        android:textSize="18dp" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_proceed"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/textSize_20"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/border"
+        android:backgroundTint="@color/colorPrimary"
+        android:fontFamily="@font/quicksand_bold"
+        android:minWidth="150dp"
+        android:text="@string/add_friend"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:backgroundTint="@color/colorPrimary" />
+
+</RelativeLayout>

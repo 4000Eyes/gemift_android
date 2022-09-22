@@ -1,0 +1,122 @@
+plugins {
+    id 'com.android.application'
+}
+
+def getDate() {
+    def date = new Date()
+    def formattedDate = date.format('yyyyMMddHHmm')
+    return formattedDate
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.gift.gemift"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+        applicationVariants.all { variant ->
+            variant.outputs.all { output ->
+                outputFileName = new File("GEMIFT_"+versionCode+"_"+getDate()+ ".apk")
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    //Google Material
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    implementation 'com.google.maps.android:android-maps-utils:2.3.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+    def multidex_version = "2.0.1"
+    implementation "androidx.multidex:multidex:$multidex_version"
+    def lifecycle_version = '2.4.0'
+    def liveData_version = "2.4.0"
+    def recyclerview_version = "1.2.1"
+    def cardview_version = "1.0.0"
+    //Gson
+    implementation 'com.google.code.gson:gson:2.8.9'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
+
+    // ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel:$lifecycle_version"
+    // LiveData
+    implementation "androidx.lifecycle:lifecycle-livedata:$liveData_version"
+    // Lifecycles only (without ViewModel or LiveData)
+    implementation "androidx.lifecycle:lifecycle-runtime:$lifecycle_version"
+    // Saved state module for ViewModel
+    implementation "androidx.lifecycle:lifecycle-viewmodel-savedstate:$lifecycle_version"
+    // Annotation processor
+//    annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$liveData_version"
+
+    //RXjavaRoom
+    implementation "android.arch.persistence.room:rxjava2:1.1.1"
+    //Room Database
+    implementation "android.arch.persistence.room:runtime:1.1.1"
+    annotationProcessor "android.arch.persistence.room:compiler:1.1.1"
+    //RXJava
+    implementation 'io.reactivex.rxjava2:rxandroid:2.1.1'
+    //Rx Android
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.21'
+    //Rx Binding
+    implementation 'com.jakewharton.rxbinding2:rxbinding:2.2.0'
+    //Retrofit2 rxjava
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //RecyclerView & CardView
+    implementation "androidx.recyclerview:recyclerview:$recyclerview_version"
+    implementation "androidx.cardview:cardview:$cardview_version"
+    //Glide
+    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    annotationProcessor 'com.github.bumptech.glide:compiler:4.12.0'
+    //Google Map
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+    implementation 'com.google.android.gms:play-services-maps:18.0.2'
+    implementation 'com.google.android.libraries.places:places:2.5.0'
+    //OTP
+    implementation 'com.alimuzaffar.lib:pinentryedittext:2.0.6'
+    //Country Code
+    implementation 'com.hbb20:ccp:2.5.4'
+    //ImagePicker
+    implementation 'com.github.dhaval2404:imagepicker-support:1.7.1'
+    //
+    implementation 'io.github.vicmikhailau:MaskedEditText:4.0.7'
+    //SweetAlert
+     implementation 'com.github.cazaea:sweet-alert-dialog:1.0.0'
+
+    implementation 'com.intuit.ssp:ssp-android:1.1.0'
+    implementation 'com.intuit.sdp:sdp-android:1.1.0'
+
+    implementation 'com.github.mckrpk:AnimatedProgressBar:0.1.0'
+
+    implementation 'com.google.android.material:material:1.0.0'
+
+    implementation 'io.michaelrocks:libphonenumber-android:8.10.16'
+
+
+}

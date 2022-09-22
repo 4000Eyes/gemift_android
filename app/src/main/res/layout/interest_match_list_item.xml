@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_margin="@dimen/_5sdp"
+        android:id="@+id/ll_image"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imageView"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_50sdp"
+            android:src="@drawable/images"
+            android:padding="@dimen/_2sdp"
+            android:background="@drawable/circle_primary"/>
+        <TextView
+            android:id="@+id/txtView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/user_name"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/open_sans_regular"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/text_color_gray_100"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_margin="@dimen/_5sdp"
+        android:id="@+id/ll_status"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="@dimen/_3sdp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/line"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/ll_image"
+        android:orientation="horizontal"
+
+        android:gravity="center">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/friend_score"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@color/text_color_gray_op_60"/>
+
+            <TextView
+                android:id="@+id/txt_friend_circle_score"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="79%"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="bottom"
+
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_orange"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/your_score"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@color/text_color_gray_op_60"/>
+
+            <TextView
+                android:id="@+id/txt_your_score"
+
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="31%"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="bottom"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="@dimen/_20ssp"
+                android:textStyle="bold"
+                android:textColor="@color/text_color_orange"/>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/txt_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/keep_learning"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:gravity="center_horizontal"
+                android:fontFamily="@font/open_sans_regular"
+                android:textSize="@dimen/_9ssp"
+                android:textColor="@color/text_color_gray_op_60"/>
+            <ImageView
+                android:id="@+id/img_status_icon"
+                android:layout_width="@dimen/_34sdp"
+                android:layout_height="match_parent"
+                android:padding="@dimen/_5sdp"
+                android:src="@drawable/ic_clock" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <View
+        android:id="@+id/line"
+        app:layout_constraintTop_toBottomOf="@id/ll_image"
+        android:layout_marginLeft="@dimen/_5sdp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+
+        android:background="@color/text_color_gray_op_60"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

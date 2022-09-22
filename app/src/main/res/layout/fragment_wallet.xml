@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBG">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:scrollbarStyle="outsideOverlay"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/transaction_list_items" />
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/noData"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/dark_gray"
+        android:text="@string/no_transaction"/>
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:visibility="gone"
+        android:id="@+id/ll_pay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:padding="@dimen/_20sdp"
+        android:background="@color/quantum_black_hint_text">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:cardElevation="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/action_close"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:src="@drawable/close"
+                android:layout_margin="@dimen/_5sdp"
+                android:layout_gravity="right"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Enter your pay amount"
+                android:textSize="@dimen/_15ssp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textStyle="bold" />
+
+            <EditText
+                android:id="@+id/edt_pay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_margin="@dimen/_50sdp"
+                android:inputType="numberDecimal"
+                android:hint="0.0"
+                android:gravity="center"
+                android:imeOptions="actionDone"
+                android:textStyle="bold"
+                android:textSize="@dimen/_20sdp"
+                android:background="@drawable/rounded_corner"/>
+
+
+            <TextView
+                android:id="@+id/pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red"
+                android:text="Pay"
+                android:background="?selectableItemBackground"
+                android:textSize="@dimen/_15ssp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/_115sdp"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+</RelativeLayout>

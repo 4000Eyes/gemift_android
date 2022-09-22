@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_10"
+    android:background="@drawable/rounded_corner_gray"
+    tools:context=".Ui.SplashScreen.SplashScreen">
+
+
+    <LinearLayout
+        android:layout_margin="@dimen/margin_5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img_item"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:padding="@dimen/margin_3"
+                android:src="@drawable/avatar"
+                android:background="@drawable/circle_primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+
+
+                <TextView
+                    android:id="@+id/txt_friend_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:text="@string/friend_name"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/textSize_14" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="@dimen/margin_3"
+                    android:layout_marginBottom="@dimen/margin_3">
+
+                    <TextView
+                        android:id="@+id/txt_occasion_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:background="@drawable/rounded_corner_green"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:padding="@dimen/margin_5"
+                        android:text="@string/wedding_day"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/textSize_10" />
+
+
+                    <TextView
+                        android:id="@+id/txt_occasion_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_10"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text="12 December 2021"
+                        android:textColor="@color/text_color_inactive"
+                        android:textSize="@dimen/textSize_12" />
+                </LinearLayout>
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/txt_occasion_day_remains"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text="12 December 2021"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color_inactive"
+                        android:textSize="@dimen/textSize_14" />
+
+                    <View
+                        android:layout_width="@dimen/_2sdp"
+                        android:layout_height="@dimen/_10sdp"
+                        android:background="@color/black"
+                        android:layout_marginLeft="@dimen/_5sdp"/>
+
+
+                    <TextView
+                        android:id="@+id/txt_occasion_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text=""
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_color_inactive"
+                        android:textSize="@dimen/textSize_14"  />
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+
+
+                <TextView
+                    android:id="@+id/txt_gift_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_regular"
+                    android:text="@string/select_few_gift_to_buy_later"
+                    android:textAlignment="center"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:textColor="@color/text_color_inactive"
+                    android:textSize="@dimen/textSize_12" />
+
+
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_selection_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="@dimen/margin_3">
+
+            <TextView
+                android:visibility="gone"
+                android:layout_weight="1"
+                android:id="@+id/txt_choose"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/open_sans_bold"
+                android:padding="@dimen/margin_5"
+                android:gravity="center"
+                android:background="?selectableItemBackground"
+                android:text="@string/choose_gift"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize_12" />
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/txt_pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/open_sans_bold"
+                android:padding="@dimen/margin_5"
+                android:gravity="center"
+                android:background="?selectableItemBackground"
+                android:text="@string/poke_group"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize_12" />
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/txt_buy_gift"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="start"
+                android:fontFamily="@font/open_sans_bold"
+                android:layout_marginStart="@dimen/margin_10"
+                android:padding="@dimen/margin_5"
+                android:gravity="center"
+                android:text="@string/buy_now"
+                android:background="?selectableItemBackground"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize_12" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="center_vertical"
+    android:layout_marginStart="@dimen/_15sdp"
+    android:layout_marginEnd="@dimen/_15sdp"
+    android:padding="@dimen/_5sdp">
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_user"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:src="@drawable/images"
+        android:padding="@dimen/_2sdp"
+        android:background="@drawable/circle"/>
+
+    <ImageView
+        android:id="@+id/img_product"
+        app:layout_constraintRight_toRightOf="@id/product_amount"
+        app:layout_constraintLeft_toLeftOf="@id/product_amount"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="@dimen/_30sdp"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/watch"/>
+
+    <TextView
+        android:id="@+id/product_amount"
+        app:layout_constraintTop_toBottomOf="@id/img_product"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="@dimen/_5sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10.54"
+        android:textStyle="bold"
+        android:textSize="@dimen/_10ssp"
+        android:fontFamily="@font/open_sans_bold"
+        android:textColor="@color/black"/>
+
+
+
+
+    <TextView
+        android:id="@+id/title"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/img_user"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Birthday"
+        android:textStyle="bold"
+        android:textSize="@dimen/_14ssp"
+        android:fontFamily="@font/quicksand_bold"
+        android:textColor="@color/red"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_dates"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/img_user"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/start_date"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Starts : 11-09-1988"
+            android:textStyle="bold"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/barlow"
+            android:textColor="@color/gery"/>
+
+        <TextView
+            android:id="@+id/ends_date"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ends : 11-09-1988"
+            android:textStyle="bold"
+            android:textSize="@dimen/_9ssp"
+            android:fontFamily="@font/barlow"
+            android:textColor="@color/gery"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_price"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/img_user"
+        app:layout_constraintTop_toBottomOf="@id/ll_dates"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_height="@dimen/_20sdp">
+
+        <TextView
+            android:id="@+id/user_count"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Member : 4"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/opensans_medium"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/per_rate"
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1000/per"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/opensans_medium"
+            android:textColor="@color/black"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/ll_opt"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintStart_toEndOf="@id/img_user"
+        app:layout_constraintTop_toBottomOf="@id/ll_price"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_height="@dimen/_20sdp">
+
+        <TextView
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPT IN"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/red"/>
+
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/switch_option"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_width="wrap_content"
+            app:thumbTint="@color/red"
+
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:layout_marginTop="@dimen/_2sdp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toEndOf="@id/img_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="OPT OUT"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10ssp"
+            android:fontFamily="@font/open_sans_bold"
+            android:textColor="@color/red"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <TextView
+        android:id="@+id/txt_pay"
+        android:layout_marginStart="@dimen/_10sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ll_opt"
+        android:layout_width="@dimen/_100sdp"
+        android:layout_margin="@dimen/_5sdp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:text="Pay"
+        android:textColor="@color/white"
+        android:background="@drawable/red_button_background"
+        android:layout_height="@dimen/_20sdp">
+    </TextView>
+
+
+
+    <View
+        app:layout_constraintTop_toBottomOf="@id/txt_pay"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/text_color_gray_op_60"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

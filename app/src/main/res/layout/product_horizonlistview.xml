@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/screenBG">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_work_order"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_10"
+        android:background="@color/card_color"
+        android:elevation="@dimen/margin_10"
+        app:cardBackgroundColor="@color/card_color"
+        app:cardCornerRadius="@dimen/margin_15"
+        app:cardElevation="15dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/margin_2"
+            android:layout_marginTop="@dimen/margin_10"
+            android:layout_marginRight="@dimen/margin_2"
+            android:layout_marginBottom="@dimen/margin_10"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/img_friends2"
+                android:layout_width="@dimen/margin_150"
+                android:layout_height="@dimen/margin_150"
+                android:layout_gravity="center"
+                android:padding="15dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/watch" />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@color/gray_btn_bg_pressed_color" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:background="#F2F2F2"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/prod_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/open_sans_bold"
+                    android:gravity="center"
+                    android:text="This is product title 11088" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/prod_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/open_sans_bold"
+                        android:maxLines="1"
+                        android:text="$200"
+                        android:textColor="@color/black" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="20dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/greenedittext"
+                        android:drawableLeft="@drawable/ic_like"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:gravity="center"
+                        android:text="like"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>

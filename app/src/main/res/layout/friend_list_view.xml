@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/tools"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:padding="@dimen/margin_5"
+    app:ignore="NamespaceTypo">
+
+
+        <LinearLayout
+            android:id="@+id/ll_main"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/img_friend_circle"
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_50sdp"
+                android:background="@drawable/circle_primary"
+                android:contentDescription="@null"
+                android:padding="@dimen/margin_2"
+                android:scaleType="centerCrop"
+                android:src="@drawable/images" />
+            <TextView
+                android:id="@+id/txt_friend_circle_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/opensans_medium"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/user_name"
+                android:lines="1"
+                android:ellipsize="end"
+                android:textColor="@color/colorPrimary"
+                android:layout_below="@+id/img_friend_circle"
+                android:textSize="@dimen/_11ssp" />
+            </LinearLayout>
+
+
+           <LinearLayout
+               android:id="@+id/ll_action"
+               android:visibility="gone"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txt_friend_circle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:fontFamily="@font/opensans_medium"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:padding="@dimen/_2sdp"
+                        android:text="@string/user_name"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_11ssp" />
+
+                    <TextView
+                        android:id="@+id/txt_contributor_size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_5sdp"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:text="description"
+                        android:textColor="@color/text_color_gray_op_60"
+                        android:textSize="@dimen/_10ssp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/margin_5"
+                        android:layout_marginEnd="@dimen/margin_5">
+
+                        <LinearLayout
+
+                            android:id="@+id/bn_add_occasion"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:padding="@dimen/_5ssp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:layout_gravity="center"
+                            android:background="@drawable/rounded_primary">
+
+
+
+                            <TextView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/open_sans_regular"
+                                android:text="Add Occasion"
+                                android:lines="2"
+                                android:gravity="center"
+                                android:ellipsize="end"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/bn_add_Interest"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_5ssp"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:background="@drawable/rounded_primary"
+                            android:orientation="vertical">
+
+
+
+                            <TextView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/open_sans_regular"
+                                android:text="Add Interest"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8ssp" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/imgProd"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_5ssp"
+                            android:gravity="center"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:background="@drawable/rounded_primary"
+                            android:orientation="vertical">
+                            <TextView
+                                android:layout_width="@dimen/_50sdp"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/open_sans_regular"
+                                android:text="Buy Gifts"
+                                android:gravity="center"
+                                android:lines="2"
+                                android:ellipsize="end"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_8ssp" />
+                        </LinearLayout>
+
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+
+
+        </LinearLayout>
+
+    <View
+        android:visibility="gone"
+        android:id="@+id/line"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_below="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1ssp"
+        android:background="@color/text_color_gray_op_60"/>
+</RelativeLayout>

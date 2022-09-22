@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screenBG"
+    android:orientation="vertical"
+    tools:context=".Ui.DashBoard.Fragments.Home.AddOccasionList">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/llAppBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp">
+
+            <ImageView
+                android:id="@+id/action_home"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginLeft="@dimen/_15sdp"
+                android:src="@drawable/ic_home"
+                android:background="?selectableItemBackground"
+                app:tint="@color/colorPrimaryDark" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/margin_5"
+                android:layout_weight="1"
+                android:fontFamily="@font/open_sans_regular"
+                android:gravity="center"
+                android:text="The Stuff I Love"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/textSize_18"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/action_done"
+                android:layout_width="@dimen/_24sdp"
+                android:layout_height="@dimen/_24sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:src="@drawable/ic_done"
+                android:background="?selectableItemBackground"
+                app:tint="@color/colorPrimaryDark" />
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+        <LinearLayout
+            android:layout_below="@id/llAppBar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:visibility="visible">
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/_15sdp"
+                    android:orientation="vertical"
+                    android:background="@drawable/rounded_corner_top">
+                    <TextView
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/margin_5"
+                        android:fontFamily="@font/open_sans_regular"
+                        android:gravity="center"
+                        android:text="Sorting your interest"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/textSize_15"
+                        android:textStyle="bold" />
+
+                   <androidx.appcompat.widget.LinearLayoutCompat
+                       android:visibility="gone"
+                       android:id="@+id/progress"
+                       android:layout_width="match_parent"
+                       android:layout_height="match_parent"
+                       android:gravity="center">
+                       <ImageView
+                           android:id="@+id/progress_image"
+                           android:layout_width="@dimen/_60sdp"
+                           android:layout_height="@dimen/_60sdp"/>
+                   </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:visibility="gone"
+                        android:id="@+id/rv_sub_category"
+                        android:padding="@dimen/_10sdp"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                        android:orientation="vertical"
+                        app:spanCount="2"
+                        tools:itemCount="10"
+                        tools:listitem="@layout/category_list_items"/>
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:visibility="gone"
+                        android:id="@+id/ll_no_data"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/no_data"
+                            app:tint="@color/colorPrimaryDark" />
+
+                        <TextView
+
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/margin_5"
+                            android:fontFamily="@font/open_sans_regular"
+                            android:gravity="center"
+                            android:text="No Items Available"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="@dimen/textSize_18"
+                            android:textStyle="bold" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </LinearLayout>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
